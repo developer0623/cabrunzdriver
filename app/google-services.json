@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1061302659630",
+    "firebase_url": "https://cabrunzprovider.firebaseio.com",
+    "project_id": "cabrunzprovider",
+    "storage_bucket": "cabrunzprovider.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061302659630:android:77edfb642c46d19a",
+        "android_client_info": {
+          "package_name": "com.cabrunzltd.cabrunz.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061302659630-l613faf6h8k4pohq5mj4nujmp50fp1a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPea3ryvRk7-q7JuvcBz-in0bRSpG172o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

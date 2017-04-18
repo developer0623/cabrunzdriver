@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_back_color" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <com.cabrunzltd.cabrunz.driver.widget.MyFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.01"
+                android:text="Available to drive?"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <ToggleButton
+                android:id="@+id/switchAvaibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/my_btn_toggle"
+                android:padding="10dp"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rlClientReqTimeLeft"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="visible" >-->
+
+        <!--<ProgressBar-->
+            <!--android:id="@+id/pbClientReqTime"-->
+            <!--style="?android:attr/progressBarStyleHorizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:max="100"-->
+            <!--android:minHeight="20dp"-->
+            <!--android:progress="10"-->
+            <!--android:progressDrawable="@drawable/customprogress" />-->
+
+        <!--&lt;!&ndash;<com.automated.taxinow.driver.widget.MyFontTextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tvClentReqRemainTime"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Medium Text"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textAppearance="?android:attr/textAppearanceMedium" />&ndash;&gt;-->
+    <!--</RelativeLayout>-->
+
+
+        <include
+            android:id="@+id/clientDetailView"
+            layout="@layout/include_detail_view"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/relMap"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/btnMyLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ub_button_mylocation" />
+
+            <fragment
+                android:id="@+id/clientReqMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <LinearLayout
+                android:id="@+id/llAcceptReject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.cabrunzltd.cabrunz.driver.widget.MyFontButton
+                    android:id="@+id/btnClientAccept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/color_button_blue"
+                    android:gravity="center"
+                    android:text="@string/text_accept"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/divider" />
+
+                <com.cabrunzltd.cabrunz.driver.widget.MyFontButton
+                    android:id="@+id/btnClientReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/reject_color"
+                    android:gravity="center"
+                    android:text="@string/text_reject"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.cabrunzltd.cabrunz.driver.widget.MyFontButton
+        android:id="@+id/btnClientReqRemainTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:text="58"
+        android:textColor="@color/text_count"
+        android:textSize="@dimen/dimen_waiting_time"
+        android:visibility="gone" />
+
+</RelativeLayout>

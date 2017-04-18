@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.cabrunzltd.cabrunz.driver.widget.MyFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+         android:layout_marginLeft="10dp"
+        android:text="Fare" 
+        android:textSize="18dp"/>
+        <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.cabrunzltd.cabrunz.driver.widget.MyFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="ESTIMATED FARE"
+                
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_button_blue" 
+                android:textSize="15dp"/>
+       <com.cabrunzltd.cabrunz.driver.widget.MyFontTextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+         android:layout_marginLeft="10dp"
+         android:drawablePadding="5dp"
+         android:drawableLeft="@drawable/n"
+        android:text="40.00" 
+        android:textSize="15dp"/>
+       </LinearLayout>
+
+    <ImageView
+        android:id="@+id/agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+         android:layout_marginRight="10dp"
+        android:src="@drawable/unselectable" />
+
+       </RelativeLayout>
+         <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.cabrunzltd.cabrunz.driver.widget.MyFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="CUSTOM FARE"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_button_blue" 
+                android:textSize="15dp"/>
+       <com.cabrunzltd.cabrunz.driver.widget.MyFontEdittextView
+                        android:id="@+id/customfare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:background="@drawable/bg_edittext"
+                        android:ems="10"
+                        android:hint="@string/text_fare"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                  
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_text_dark" 
+                        android:textSize="15dp"
+                        android:inputType="numberDecimal"/>
+          </LinearLayout>
+
+    <ImageView
+        android:id="@+id/disagree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/unselectable" />
+
+       </RelativeLayout>
+       <com.cabrunzltd.cabrunz.driver.widget.MyFontTextView
+        android:id="@+id/endtrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_button_blue"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="@color/white" 
+        android:text="END TRIP"/>
+</LinearLayout>
